@@ -14,7 +14,7 @@ function SignUp() {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -70,18 +70,18 @@ function SignUp() {
       .then((data) => {
         if (data.success) {
           setSuccessMessage("Sign up successful!");
-          setErrorMessage(""); // Clear error message
+          setErrorMessage(""); 
           setTimeout(() => {
-            navigate("/signIn"); // Redirect to signIn after successful signup
-          }, 2000); // Delay for 2 seconds before redirecting
+            navigate("/signIn");
+          }, 2000); 
         } else {
           setErrorMessage("Sign up failed: " + data.message);
-          setSuccessMessage(""); // Clear success message
+          setSuccessMessage(""); 
         }
       })
       .catch((error) => {
         setErrorMessage("An error occurred: " + error.message);
-        setSuccessMessage(""); // Clear success message
+        setSuccessMessage(""); 
       });
   };
 
