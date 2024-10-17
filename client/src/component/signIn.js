@@ -35,18 +35,15 @@ function Login() {
       return;
     }
 
-    // Store email and password in localStorage
-    localStorage.setItem("email", formData.email);
+   localStorage.setItem("email", formData.email);
     localStorage.setItem("password", formData.password);
 
-    // Create the payload for the POST request
     const payload = {
       email: formData.email,
       password: formData.password,
     };
 
-    // Send POST request using fetch
-    try {
+     try {
       const response = await fetch("http://localhost:8000/signIn", { 
         method: "POST",
         headers: {
