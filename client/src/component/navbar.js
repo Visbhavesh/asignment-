@@ -11,15 +11,8 @@ const Navbar = () => {
     navigate('/signin'); // Redirect to the login page
   };
 
-//   let userDetails = {};
+
 let email=localStorage.getItem('email');
-//   if (accessToken && email) {
-//     try {
-//     //   userDetails = jwtDecode(accessToken);
-//     } catch (error) {
-//       console.error('Invalid token:', error);
-//     }
-//   }
 
   return (
     <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
