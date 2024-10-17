@@ -9,7 +9,6 @@ import Navbar from './component/navbar.js';
 const ProtectedRoute = ({ children }) => {
   const isAuthenticated = localStorage.getItem("accesstoken");
 
-  // If no access token is found, redirect to the login page
   if (!isAuthenticated) {
     return <Navigate to="/signIn" replace />;
   }
